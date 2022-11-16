@@ -1,6 +1,6 @@
-## Adventure REACT frontend
+### Adventure REACT frontend
 
-Build by following this tutorial:
+Built by following this tutorial:
 https://www.youtube.com/watch?v=sh4WrNGDvQM
 
 ## For front end devs who don't want to run rails on their local machines

@@ -15,15 +15,16 @@ const Map = () => {
     
   return (
     <div>
-        <div class="border-solid border-2 border-black-900 w-96 h-96">
-            <h4>Map here</h4>
-            <ReactMapGL 
-                {...viewport} 
-                mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-                onMove={evt => setViewport(evt.viewport)}
-                mapStyle="mapbox://styles/mapbox/streets-v11"
-            >
-            </ReactMapGL>
+        <div class='flex items-center justify-center h-center'>
+            <div class='border-solid border-2 border-black-600 w-96 h-96'>
+                <ReactMapGL 
+                    {...viewport} 
+                    mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+                    onMove={evt => setViewport(evt.viewport)}
+                    mapStyle="mapbox://styles/mapbox/streets-v11"
+                >
+                </ReactMapGL>
+            </div>
         </div>
     </div>
   )

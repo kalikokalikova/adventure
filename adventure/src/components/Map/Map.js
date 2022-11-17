@@ -6,7 +6,7 @@ const Map = () => {
     const [viewport, setViewport] = useState({
         latitude: 37.79107022782, 
         longitude: -122.43782361688397,
-        zoom: 10,
+        zoom: 13,
         width: '100vw',
         height: '100vh'
     })
@@ -15,7 +15,7 @@ const Map = () => {
     
   return (
     <div>
-        <div>
+        <div class="border-solid border-2 border-black-900 w-96 h-96">
             <h4>Map here</h4>
             <ReactMapGL 
                 {...viewport} 

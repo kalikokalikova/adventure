@@ -15,7 +15,7 @@ function About() {
     <h1 className='text-3xl text-white font-bold text-center pt-[4rem]'>Our Mission</h1>
       <p className='text-center pt-6 px-4'> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas libero porro impedit laboriosam natus reiciendis qui provident explicabo repellat atque saepe quaerat corporis molestias, alias doloribus praesentium non officia aliquam!</p>
     </div>
-    {/* <Testimonials/> */}
+    <Testimonials/>
     {/* <Footer/> */}
     </div>
   )

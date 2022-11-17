@@ -1,7 +1,7 @@
 import React from 'react'
 // import Footer from '../components/Footer'
 // import NavBar from '../components/NavBar'
-// import Testimonials from '../components/Testimonials'
+import Testimonials from '../components/Testimonials'
 
 function Home() {
   return (
@@ -18,7 +18,7 @@ function Home() {
             <h1 className='text-white font-bold text-center pt-5 text-4xl'>MAP</h1>
             </div>
         </div>
-       {/* <Testimonials/> */}
+       <Testimonials/>
         {/* <Footer/> */}
     </div>
   )

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Points from './components/Points';
+// import Points from './components/Points';
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes} from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
@@ -35,7 +35,7 @@ function App() {
           <Route path="/about" element={<About/>}/>
         </Routes>
       </BrowserRouter>
-        < Points points={points} />
+        {/* < Points points={points} /> */}
     </div>
   );
 }

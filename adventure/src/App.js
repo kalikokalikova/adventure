@@ -1,9 +1,8 @@
-import './App.css';
 import axios from 'axios';
 import Points from './components/Points';
 import { useEffect, useState } from 'react';
 
-const API_URL = "http://localhost:3000/api/v1/points";
+const API_URL = "https://adventure.mocklab.io/api/v1/points";
 
 function getAPIData() {
     return axios.get(API_URL).then((response) => response.data)

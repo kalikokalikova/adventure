@@ -1,7 +1,7 @@
 import React from 'react'
 import Map from '../Map/Map'
 
-const Home = () => {
+const Main = () => {
   return (
     <div>
         <div>Navbar Here</div>
@@ -15,4 +15,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Main

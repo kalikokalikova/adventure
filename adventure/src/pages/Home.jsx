@@ -1,12 +1,12 @@
 import React from 'react'
-import Footer from '../components/Footer'
-import NavBar from '../components/NavBar'
+// import Footer from '../components/Footer'
+// import NavBar from '../components/NavBar'
 // import Testimonials from '../components/Testimonials'
 
 function Home() {
   return (
     <div className='bg-[#f8b195] text-black h-full'>
-        <NavBar/>
+        {/* <NavBar/> */}
         <div className='bg-black h-[30vh]'>
             <h1 className='text-white font-bold text-center pt-5 text-4xl'>HERO</h1>
         </div>
@@ -19,7 +19,7 @@ function Home() {
             </div>
         </div>
        {/* <Testimonials/> */}
-        <Footer/>
+        {/* <Footer/> */}
     </div>
   )
 }

@@ -1,17 +1,34 @@
-import React, { useState } from 'react'
-import ReactMapGL from 'react-map-gl'
+import React, { useState, useEffect } from 'react'
+import ReactMapGL, {Marker} from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
+import axios from 'axios'
 
 const Map = () => {
     const [viewport, setViewport] = useState({
         latitude: 37.79107022782, 
         longitude: -122.43782361688397,
-        zoom: 13,
+        zoom: 15,
         width: '100vw',
         height: '100vh'
     })
 
-    console.log(viewport)
+    const [location, setLocation] = useState([])
+
+    // console.log(viewport)
+    console.log(location)
+
+    useEffect(() => {
+        const getData = async () => {
+            try{
+                const data = await axios.get('https://adventure.mocklab.io/api/v1/points')
+                setLocation(data.data)
+                console.log(data)
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        getData()
+    }, [])
     
   return (
     <div>
@@ -23,6 +40,11 @@ const Map = () => {
                     onMove={evt => setViewport(evt.viewport)}
                     mapStyle="mapbox://styles/mapbox/streets-v11"
                 >
+                    {/* {location.data.map(location => (
+                        <Marker>
+                            <div>Park!</div>
+                        </Marker>
+                    ))} */}
                 </ReactMapGL>
             </div>
         </div>

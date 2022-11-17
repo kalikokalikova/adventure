@@ -17,7 +17,10 @@ function Home() {
             <h1 className=' font-bold text-center pt-5 text-4xl'>INPUT FORM</h1>
             </div>
             <div className='md:w-[65%] w-[100%] bg-white h-[100%] border-solid border-2  md:h-[93%] md:my-4 md:mr-4'>
-            <h1 className=' font-bold text-center pt-5 text-4xl'>MAP <Map /></h1>
+              <h1 className=' font-bold text-center pt-5 text-4xl'>
+                MAP 
+                <Map />
+              </h1>
             </div>
         </div>
        <Testimonials/>

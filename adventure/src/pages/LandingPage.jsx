@@ -5,7 +5,6 @@ import {Link} from 'react-router-dom'
 function LandingPage() {
   return (
     <div>
-   
         <div className='flex h-[100vh] justify-center items-center bg-black text-white transition ease-out duration-500 '>
             <div className='flex flex-col  items-center'>
               <h1 className='font-bold text-3xl pb-6'>Ready for an adventure?</h1>

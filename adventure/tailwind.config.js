@@ -2,7 +2,13 @@
 module.exports = {
   content: [ "./src/**/*.{js,jsx,ts,tsx}",],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        heebo: ["Heebo", "sans-serif"],
+        lexend: ["Lexend", "sans-serif"],
+        lobster: ["Lobster Two", "cursive"]
+      }
+    },
   },
   plugins: [],
 }

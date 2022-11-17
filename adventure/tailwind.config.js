@@ -4,8 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        heebo: ["Heebo", "sans-serif"],
-        lexend: ["Lexend", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
         lobster: ["Lobster Two", "cursive"]
       }
     },

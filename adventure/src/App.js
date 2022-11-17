@@ -1,8 +1,11 @@
-import './App.css';
 import axios from 'axios';
-import Points from './components/Points';
+// import Points from './components/Points';
 import { useEffect, useState } from 'react';
-// import Home from './components/Home/Home';
+import { BrowserRouter, Route, Routes} from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import Home from "./pages/Home"
+import About from "./pages/About";
+
 
 const API_URL = "https://adventure.mocklab.io/api/v1/points";
 
@@ -24,10 +27,15 @@ function App() {
     }, []);
 
     return (
-    <div className="App">
-        <h1>Hello ADventure world!</h1>
-        < Points points={points} />
-        {/* <Home /> */}
+    <div >
+    <BrowserRouter>
+        <Routes>
+          <Route path ="/" element={<LandingPage/>}/>
+          <Route path="/home" element={<Home/>}/>
+          <Route path="/about" element={<About/>}/>
+        </Routes>
+      </BrowserRouter>
+        {/* < Points points={points} /> */}
     </div>
   );
 }

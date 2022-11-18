@@ -7,7 +7,7 @@ import Home from "./pages/Home"
 import About from "./pages/About";
 
 
-const API_URL = "http://localhost:3000/api/v1/points";
+const API_URL = "https://adventure.mocklab.io/api/v1/points";
 
 function getAPIData() {
     return axios.get(API_URL).then((response) => response.data)
@@ -16,15 +16,15 @@ function getAPIData() {
 function App() {
     const [points, setPoints] = useState([]);
 
-    useEffect(() => {
-        let mounted = true;
-        getAPIData().then((items) => {
-            if (mounted) {
-                setPoints(items);
-            }
-        });
-        return () => (mounted = false);
-    }, []);
+    // useEffect(() => {
+    //     let mounted = true;
+    //     getAPIData().then((items) => {
+    //         if (mounted) {
+    //             setPoints(items);
+    //         }
+    //     });
+    //     return () => (mounted = false);
+    // }, []);
 
     return (
     <div >

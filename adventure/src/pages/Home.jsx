@@ -2,6 +2,7 @@ import React from 'react'
 // import Footer from '../components/Footer'
 // import NavBar from '../components/NavBar'
 import Testimonials from '../components/Testimonials'
+import Map from '../components/Map/Map'
 
 
 function Home() {
@@ -17,7 +18,7 @@ function Home() {
            </div>
 {/* MAP container  */}
             <div className=' w-[100%] h-[83vh] bg-white border-solid border-2 md:h-[82vh] lg:w-[75%] '>
-              
+              <Map />
             </div>
             
         </div>

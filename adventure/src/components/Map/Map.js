@@ -3,6 +3,7 @@ import ReactMapGL, {Marker} from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 // import axios from 'axios'
 import locationData from '../../Utils/mapdata.json'
+import skate from '../../assets/skateboarding.svg'
 
 // const API_URL = 'https://adventure.mocklab.io/api/v1/points'
 
@@ -52,17 +53,19 @@ const Map = () => {
                     onMove={evt => setViewport(evt.viewport)}
                     mapStyle="mapbox://styles/mapbox/streets-v11"
                 >
-                    {locationData.features.map(location => (
+                    {locationData.features.map((location) => (
                         <Marker
                             key={location.properties.id}
                             latitude={location.geometry.coordinates[1]}
                             longitude={location.geometry.coordinates[0]}
                         >
-                            <div>Park!</div>
+                            <button>
+                                <img src={skate} alt='skate' />
+                            </button>
                         </Marker>
                     ))}
-                    {/* {location.features.map((item, index) => console.log(item))} */}
-                    {/* {console.log(locationData.features)} */}
+                    {locationData.features.map((location) => console.log(location.geometry.coordinates[1]))}
+                    {/* {console.log(locationData.features[0].properties)} */}
                     {/* {locationData.features.map(location => (
                         <Marker>
 

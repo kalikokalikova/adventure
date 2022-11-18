@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from 'react'
 import ReactMapGL, {Marker} from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
-import axios from 'axios'
+// import axios from 'axios'
+import locationData from '../../Utils/mapdata.json'
 
-const API_URL = 'https://adventure.mocklab.io/api/v1/points'
+// const API_URL = 'https://adventure.mocklab.io/api/v1/points'
 
-const getData = () => {
-    return axios.get(API_URL).then((res) => res.data)
-}
+// const getData = () => {
+//     return axios.get(API_URL).then((res) => res.data)
+// }
 
 const Map = () => {
     const [viewport, setViewport] = useState({
-        latitude: 37.79107022782, 
-        longitude: -122.43782361688397,
-        zoom: 15,
+        latitude: 45.4211, 
+        longitude: -75.6903,
+        zoom: 10,
         width: '100vw',
         height: '100vh'
     })
@@ -22,18 +23,18 @@ const Map = () => {
 
     // console.log(viewport)
 
-    useEffect(() => {
-        const getData = async () => {
-            try{
-                const data = await axios.get('https://adventure.mocklab.io/api/v1/points')
-                setLocation(data.data.features)
-                // console.log(data)
-            } catch (error) {
-                console.log(error)
-            }
-        }
-        getData()
-    }, [])
+    // useEffect(() => {
+    //     const getData = async () => {
+    //         try{
+    //             const data = await axios.get('https://adventure.mocklab.io/api/v1/points')
+    //             setLocation(data.data)
+    //             // console.log(data)
+    //         } catch (error) {
+    //             console.log(error)
+    //         }
+    //     }
+    //     getData()
+    // }, [])
 
     // useEffect(() => {
     //     getData().then((items) =>{
@@ -51,7 +52,7 @@ const Map = () => {
                     onMove={evt => setViewport(evt.viewport)}
                     mapStyle="mapbox://styles/mapbox/streets-v11"
                 >
-                    {/* {location.features.map(location => (
+                    {locationData.features.map(location => (
                         <Marker
                             key={location.properties.id}
                             latitude={location.geometry.coordinates[1]}
@@ -59,9 +60,14 @@ const Map = () => {
                         >
                             <div>Park!</div>
                         </Marker>
-                    ))} */}
+                    ))}
                     {/* {location.features.map((item, index) => console.log(item))} */}
-                    {console.log(location.geometry)}
+                    {/* {console.log(locationData.features)} */}
+                    {/* {locationData.features.map(location => (
+                        <Marker>
+
+                        </Marker>
+                    ))} */}
                 </ReactMapGL>
             </div>
         </div>

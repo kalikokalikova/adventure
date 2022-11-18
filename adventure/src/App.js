@@ -16,15 +16,15 @@ function getAPIData() {
 function App() {
     const [points, setPoints] = useState([]);
 
-    useEffect(() => {
-        let mounted = true;
-        getAPIData().then((items) => {
-            if (mounted) {
-                setPoints(items);
-            }
-        });
-        return () => (mounted = false);
-    }, []);
+    // useEffect(() => {
+    //     let mounted = true;
+    //     getAPIData().then((items) => {
+    //         if (mounted) {
+    //             setPoints(items);
+    //         }
+    //     });
+    //     return () => (mounted = false);
+    // }, []);
 
     return (
     <div >

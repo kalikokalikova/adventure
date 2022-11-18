@@ -18,7 +18,7 @@ function Home() {
            </div>
 {/* MAP container  */}
             <div className=' w-[100%] h-[83vh] bg-white border-solid border-2 md:h-[82vh] lg:w-[75%] '>
-              
+              <Map />
             </div>
             
         </div>

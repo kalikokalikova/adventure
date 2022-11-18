@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes} from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import Home from "./pages/Home"
 import About from "./pages/About";
-
+import ResultsForm from './components/ResultsForm'
 
 const API_URL = "https://adventure.mocklab.io/api/v1/points";
 
@@ -33,6 +33,7 @@ function App() {
           <Route path ="/" element={<LandingPage/>}/>
           <Route path="/home" element={<Home/>}/>
           <Route path="/about" element={<About/>}/>
+          <Route path="/results" element={<ResultsForm search="Seattle, Washington" miles={2}/>}/>
         </Routes>
       </BrowserRouter>
         {/* < Points points={points} /> */}

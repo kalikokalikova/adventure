@@ -6,7 +6,7 @@ import testAvatar3 from '../assets/eg-img/test-avatar3.png'
 
 function Testimonials() {
   return (
-    <div className='bg-black h-[40%] pb-[10vh] text-black'>
+    <div className='bg-white h-[40%] pb-[10vh] text-black'>
         <h1 className='font-poppins text-3xl text-white font-bold text-center pb-4 pt-[4rem]'>Testimonials</h1>
       <div className='flex flex-col md:flex-row items-center justify-center h-[30%]  px-4'>
     

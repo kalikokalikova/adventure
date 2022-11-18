@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import ReactMapGL, {Marker} from 'react-map-gl'
+import ReactMapGL, {Marker, Popup } from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 // import axios from 'axios'
 import locationData from '../../Utils/mapdata.json'
@@ -9,12 +9,27 @@ const Map = () => {
     const [viewport, setViewport] = useState({
         latitude: 45.4211, 
         longitude: -75.6903,
-        zoom: 10,
+        zoom: 8,
         width: '100vw',
         height: '100vh'
     })
 
     const [location, setLocation] = useState([])
+    const [selectedPt, setSelectedPt] = useState(null)
+
+    useEffect(() => {
+        const listener = (e)=> {
+            if (e.key === 'Escape') {
+                setSelectedPt(null)
+            }
+        }
+        window.addEventListener('keydown', listener)
+
+        return () => {
+            window.removeEventListener('keydown', listener)
+        }
+    }, [])
+
 
     // console.log(viewport)
 
@@ -41,18 +56,44 @@ const Map = () => {
                     onMove={evt => setViewport(evt.viewport)}
                     mapStyle="mapbox://styles/mapbox/streets-v11"
                 >
-                    {locationData.features.map((location) => (
+                    {locationData.features.map(location => (
                         <Marker
                             key={location.properties.id}
                             latitude={location.geometry.coordinates[1]}
                             longitude={location.geometry.coordinates[0]}
                         >
-                            <button class='bg-transparent '>
+                            <button 
+                                class='bg-transparent border-none cursor-pointer'
+                                onClick={(e) => {
+                                    e.preventDefault()
+                                    setSelectedPt(location)
+                                    console.log(selectedPt)
+                                }}
+                            >
                                 <img class='w-10 h-10' src={skate} alt='skate icon' />
                             </button>
                         </Marker>
                     ))}
-                    {locationData.features.map((location) => console.log(location.geometry.coordinates[1]))}
+
+                    {/* {locationData.features.map((location) => console.log(location.geometry.coordinates[1]))} */}
+            
+
+                    {selectedPt ? (
+                        <Popup 
+                            latitude={selectedPt.geometry.coordinates[1]}
+                            longitude={selectedPt.geometry.coordinates[0]}
+                            anchor="top"
+                            width={200}
+                            height={200}
+                            closeButton={true}
+                            closeOnClick={false} 
+                            onClose={ () => {selectedPt(null) }}
+                            offsetTop={-800}
+                        >
+                            <h2>{selectedPt.properties.name}</h2>
+                            <p>{selectedPt.properties.description}</p>
+                        </Popup>
+                    ) : null}
                 </ReactMapGL>
             </div>
         </div>

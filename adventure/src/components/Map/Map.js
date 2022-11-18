@@ -49,8 +49,8 @@ const Map = () => {
 
   return (
     <div>
-        <div class='flex items-center justify-center h-screen'>
-            <div class='border-solid border-4 border-black-600 w-1/2 h-1/2'>
+        <div className='flex items-center justify-center h-screen'>
+            <div className='border-solid border-4 border-black-600 w-1/2 h-1/2'>
                 <ReactMapGL 
                     {...viewport} 
                     mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
@@ -64,14 +64,14 @@ const Map = () => {
                             longitude={location.geometry.coordinates[0]}
                         >
                             <button 
-                                class='bg-transparent border-none cursor-pointer'
+                                className='bg-transparent border-none cursor-pointer'
                                 onClick={(e) => {
                                     e.preventDefault()
                                     setSelectedPt(location)
                                     console.log(selectedPt)
                                 }}
                             >
-                                <img class='w-20 h-20' src={point} alt='point icon' />
+                                <img className='w-20 h-20' src={point} alt='point icon' />
                             </button>
                         </Marker>
                     ))}
@@ -89,10 +89,10 @@ const Map = () => {
                             onClose={() => {selectedPt(null) }}
                             
                         >
-                            <div class=''>
-                                <h2 class='text-lg font-bold'>{selectedPt.properties.name}</h2>
-                                <p class='text-base'>{selectedPt.properties.description}</p>
-                                <p class='text-sm'>Created on: {selectedPt.properties.created_at}</p>
+                            <div className=''>
+                                <h2 className='text-lg font-bold'>{selectedPt.properties.name}</h2>
+                                <p className='text-base'>{selectedPt.properties.description}</p>
+                                <p className='text-sm'>Created on: {selectedPt.properties.created_at}</p>
                             </div>
                         </Popup>
                     ) : null}

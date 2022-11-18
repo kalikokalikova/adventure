@@ -102,7 +102,7 @@ const Map = () => {
                         trackUserLocation
                         onGeolocate={e => setViewport(e.viewport)} 
                     />
-                    <MapSearch />
+                            <MapSearch />
                 </ReactMapGL>
             </div>
         </div>

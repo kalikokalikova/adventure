@@ -25,7 +25,7 @@ const MapSearch = () => {
     })
 
   return (
-    <div></div>
+    null
   )
 }
 

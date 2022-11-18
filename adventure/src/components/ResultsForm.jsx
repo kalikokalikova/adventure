@@ -3,10 +3,11 @@ import Elevation from "../assets/eg-img/elevation-img.svg"
 import Graph from "../assets/eg-img/elevation-grapgh.svg"
 import {useState} from "react"
 import Map from '../components/Map/Map'
+import Pin from "../assets/eg-img/map-pin.svg"
 
 function ResultsForm(props) {
 
-const [miles, setMiles] = useState(0);
+const [miles, setMiles] = useState(1);
 let elevation = 1;
   
   return (
@@ -18,11 +19,14 @@ let elevation = 1;
 {/* Results container */}
            <div className='hidden bg-[#b7dce0] bg-opacity-60 md:flex  md:h-[82vh] md:w-[45%] lg:w-[25%]'>
            <form action="#" method="POST">
-              <div className="overflow-hidden shadow sm:rounded-md">
-                <div className="bg-white px-4 py-5 sm:p-6">
-                  <div className="grid grid-cols-6 gap-6">
+              <div className="overflow-hidden">
+                <div className="px-4 py-5 sm:p-6">
+                  <div className="font-poppins grid grid-cols-6 gap-6">
 
-                    <div className="col-span-4">
+                    <div className="flex items-center col-span-6 bg-white py-1 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                    <span className="px-3 text-md">
+                          <img src={Pin} alt="map-pin"/>
+                        </span>
                       <input
                         type="text"
                         name="place"
@@ -30,21 +34,22 @@ let elevation = 1;
                         placeholder={props.search}
                         defaultValue={props.search}
                         autoComplete="given-place"
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        className="rounded-full block w-full sm:text-lg"
                       />
                     </div>
 
-                    <div className="flex col-span-6 sm:col-span-3">
+                    <div className="flex items-center col-span-4 sm:col-span-2">
 
                       <input
                         type="number"
                         name="miles"
                         id="miles"
-                        value={setMiles}
+                        defaultValue={1}
+                        value={miles}
                         autoComplete="number-miles"
-                        className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        className="text-center block w-full mr-2 rounded-md border-gray-300 shadow-sm sm:text-md"
                       />
-                        <label htmlFor="miles" className="mt-1 block text-sm font-medium text-gray-700">
+                        <label htmlFor="miles" className="mt-1 block text-sm font-medium">
                         miles
                       </label>
                     </div>
@@ -55,7 +60,7 @@ let elevation = 1;
                         name="elevation"
                         placeholder="Elevation"
                         autoComplete="elevation-value"
-                        className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                        className="mt-1 block w-full rounded-full border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                       >
                         <option>Elevation</option>
                         <option>Flat</option>
@@ -63,30 +68,31 @@ let elevation = 1;
                         <option>Hilly</option>
                       </select>
                     </div>
-
-                    <div className="col-span-3 sm:col-span-2">
-                      <label htmlFor="distance" className="block text-sm font-medium text-gray-700">
+                    <div className="flex justify-between items-center col-span-6 sm:col-span-6">
+                      <label htmlFor="distance" className="block text-lg font-medium text-gray-700">
                         {props.miles} miles
                       </label>
-                    </div>
-                    <div className="col-span-5 sm:col-span-4">
+
                       <div className="px-4 py-3 sm:px-6">
                         <button
                             type="submit"
-                            className="rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                            className="rounded-md border border-transparent bg-[#ffd25a] py-2 px-4 text-sm font-medium shadow-lg hover:bg-[#ffd25a] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                         >
                             Re-Route
                         </button>
-                        </div>
+
+                    </div>
                     </div>
 
-                    <div className="col-span-6">
-                        <div className="flex mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm md:flex  md:h-[15vh] md:w-[98%] lg:w-[98%]'">
-                        <div>
+                    <div className="bg-white rounded-md col-span-6">
+                        <div className="flex justify-between mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm md:flex  md:h-[15vh] md:w-[98%] lg:w-[98%]'">
+                        <div className="flex">
+                        <div className="mr-2">
                             <img src={Elevation} alt="elevation-img"/>
                         </div>
-                        <div className="">
+                        <div>
                             <h2>Elevation</h2>
+                        </div>
                         </div>
                         
                         <div className="text-right sm:px-6">
@@ -96,18 +102,6 @@ let elevation = 1;
                         </div>
 
                         </div>
-                    </div>
-
-                    <div className="col-span-6">
-                      <input
-                        type="text"
-                        name="distance"
-                        id="distance"
-                        rows={3}
-                        placeholder="☺ Distance"
-                        autoComplete="given-distance"
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                      />
                     </div>
 
                   </div>

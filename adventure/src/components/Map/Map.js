@@ -82,13 +82,14 @@ const Map = () => {
                         <Popup 
                             latitude={selectedPt.geometry.coordinates[1]}
                             longitude={selectedPt.geometry.coordinates[0]}
-                            anchor="top"
-                            width={200}
-                            height={200}
+                            anchor="bottom"
+                            width={300}
+                            height={300}
                             closeButton={true}
                             closeOnClick={false} 
-                            onClose={ () => {selectedPt(null) }}
-                            offsetTop={-800}
+                            closeOnMove={false}
+                            onClose={ () => {selectedPt(false) }}
+                            
                         >
                             <h2>{selectedPt.properties.name}</h2>
                             <p>{selectedPt.properties.description}</p>

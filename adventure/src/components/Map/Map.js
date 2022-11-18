@@ -9,7 +9,7 @@ const Map = () => {
     const [viewport, setViewport] = useState({
         latitude: 45.4211, 
         longitude: -75.6903,
-        zoom: 8,
+        zoom: 9,
         width: '100vw',
         height: '100vh'
     })
@@ -54,7 +54,7 @@ const Map = () => {
                     {...viewport} 
                     mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
                     onMove={evt => setViewport(evt.viewport)}
-                    mapStyle="mapbox://styles/mapbox/streets-v11"
+                    mapStyle="mapbox://styles/mapbox/streets-v9"
                 >
                     {locationData.features.map(location => (
                         <Marker
@@ -88,9 +88,11 @@ const Map = () => {
                             onClose={() => {selectedPt(null) }}
                             
                         >
-                            <h2>{selectedPt.properties.name}</h2>
-                            <p>{selectedPt.properties.description}</p>
-                            <p>Created on: {selectedPt.properties.created_at}</p>
+                            <div class=''>
+                                <h2 class='text-lg font-bold'>{selectedPt.properties.name}</h2>
+                                <p class='text-base'>{selectedPt.properties.description}</p>
+                                <p class='text-sm'>Created on: {selectedPt.properties.created_at}</p>
+                            </div>
                         </Popup>
                     ) : null}
                 </ReactMapGL>

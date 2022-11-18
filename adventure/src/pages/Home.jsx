@@ -1,7 +1,7 @@
 import React from 'react'
-// import Footer from '../components/Footer'
+import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
-import Testimonials from '../components/Testimonials'
+
 
 
 function Home() {
@@ -22,10 +22,8 @@ function Home() {
             
         </div>
 {/* Footer  */}
-        
-        <div className=' h-[10vh] bg-gradient-to-b from-[#f8d06a] to-transparent w-full'>
-            </div>
-        {/* <Footer/> */}
+        <Footer/>
+       
     </div>
   )
 }

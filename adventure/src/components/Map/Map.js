@@ -3,7 +3,7 @@ import ReactMapGL, {Marker, Popup } from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import axios from 'axios'
 import locationData from '../../Utils/mapdata.json'
-import skate from '../../assets/skateboarding.svg'
+import point from '../../assets/map-img/walk.svg'
 
 const Map = () => {
     const [viewport, setViewport] = useState({
@@ -48,8 +48,8 @@ const Map = () => {
 
   return (
     <div>
-        <div class='flex items-center justify-center h-center'>
-            <div class='border-solid border-2 border-black-600 w-96 h-96'>
+        <div class='flex items-center justify-center h-screen'>
+            <div class='border-solid border-4 border-black-600 w-1/2 h-1/2'>
                 <ReactMapGL 
                     {...viewport} 
                     mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
@@ -70,7 +70,7 @@ const Map = () => {
                                     console.log(selectedPt)
                                 }}
                             >
-                                <img class='w-10 h-10' src={skate} alt='skate icon' />
+                                <img class='bg-black border-black border-2 rounded-full w-20 h-20' src={point} alt='point icon' />
                             </button>
                         </Marker>
                     ))}

@@ -2,7 +2,6 @@ import React from "react"
 import Elevation from "../assets/eg-img/elevation-img.svg"
 import Graph from "../assets/eg-img/elevation-grapgh.svg"
 import {useState} from "react"
-import Map from '../components/Map/Map'
 import Pin from "../assets/eg-img/map-pin.svg"
 
 function ResultsForm(props) {
@@ -11,13 +10,10 @@ const [miles, setMiles] = useState(1);
 let elevation = 1;
   
   return (
-    <div className='bg-white text-black h-full '>
-{/* <NavBar/> */}
-       <div className='h-[8vh] md:flex  bg-[#69a1ac]'> </div>
-{/* MAP and INPUT container  */}
-    <div className='flex flex-col items-start justify-center md:flex-row bg-white h-[100%]'>
-{/* Results container */}
-           <div className='hidden bg-[#b7dce0] bg-opacity-60 md:flex  md:h-[82vh] md:w-[45%] lg:w-[25%]'>
+  
+
+ 
+   
            <form action="#" method="POST">
               <div className="overflow-hidden">
                 <div className="px-4 py-5 sm:p-6">
@@ -109,19 +105,7 @@ let elevation = 1;
 
               </div>
             </form>
-           </div>
-{/* MAP container  */}
-            <div className=' w-[100%] h-[83vh] bg-white border-solid border-2 md:h-[82vh] lg:w-[75%] '>
-              <Map />
-            </div>
-            
-        </div>
-{/* Footer  */}
-        
-        <div className=' h-[10vh] bg-gradient-to-b from-[#f8d06a] to-transparent w-full'>
-            </div>
-        {/* <Footer/> */}
-    </div>
+   
   )
 }
 

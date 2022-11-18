@@ -5,6 +5,7 @@ import axios from 'axios'
 import locationData from '../../Utils/mapdata.json'
 import point from '../../assets/map-img/walk.svg'
 import MapSearch from '../MapSearch/MapSearch'
+import {IoMdPhotos} from 'react-icons/io'
 
 const Map = () => {
     const [viewport, setViewport] = useState({
@@ -49,13 +50,15 @@ const Map = () => {
 
   return (
     <div>
-        <div class='flex items-center justify-center h-screen'>
-            <div class='border-solid border-4 border-black-600 w-1/2 h-1/2'>
+        <div>
+            <div 
+            className='mapboxgl-map w-[100%] h-[83vh] bg-white border-solid border-2 md:h-[82vh] lg:w-[100%] '>
                 <ReactMapGL 
                     {...viewport} 
                     mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
                     onMove={e => setViewport(e.viewport)}
-                    mapStyle="mapbox://styles/mapbox/streets-v9"
+                    mapStyle="mapbox://styles/mapbox/streets-v11"
+                    
                 >
                     {locationData.features.map(location => (
                         <Marker
@@ -64,20 +67,21 @@ const Map = () => {
                             longitude={location.geometry.coordinates[0]}
                         >
                             <button 
-                                class='bg-transparent border-none cursor-pointer'
+                                className='bg-transparent border-none cursor-pointer'
                                 onClick={(e) => {
                                     e.preventDefault()
                                     setSelectedPt(location)
                                     console.log(selectedPt)
                                 }}
                             >
-                                <img class='bg-black border-black border-2 rounded-full w-20 h-20' src={point} alt='point icon' />
+                            <IoMdPhotos 
+                            className='text-3xl text-white border-solid border-[#e0b94bfb] border-2 bg-[#e9ae0cfd] p-1 rounded-full shadow-lg'/>
                             </button>
                         </Marker>
                     ))}
 
                     {/* {locationData.features.map((location) => console.log(location.geometry.coordinates[1]))} */}
-            
+                                                {/* location, index */}
 
                     {selectedPt ? (
                         <Popup 
@@ -87,27 +91,50 @@ const Map = () => {
                             closeOnClick={false} 
                             closeOnMove={false}
                             onClose={() => {selectedPt(null) }}
+                        
                             
                         >
-                            <div class=''>
-                                <h2 class='text-lg font-bold'>{selectedPt.properties.name}</h2>
-                                <p class='text-base'>{selectedPt.properties.description}</p>
-                                <p class='text-sm'>Created on: {selectedPt.properties.created_at}</p>
+                            <div className='flex items-center justify-start'>
+                                <div className='w-[30%]'>
+                                    <img 
+                                    className='p-2 w-[100%]'
+                                        src={point}
+                                            // {selectedPt.properties.image_1} 
+                                         alt="image"/>
+                                </div>
+                                <div className='w-[60%]'>
+                                    <h2 className='font-poppins text-lg font-bold py-2'>{selectedPt.properties.name}</h2>
+                                        <p className='font-poppins text-md'>{selectedPt.properties.description}</p>
+                                        
+                                </div>
+                                
+                                
                             </div>
                         </Popup>
                     ) : null}
-                    <NavigationControl position='bottom-right' />
+                   
+                        <NavigationControl 
+                    position='bottom-right'
+                    
+                    />
+                   
                     <GeolocateControl
                         position='top-left'
                         trackUserLocation
                         onGeolocate={e => setViewport(e.viewport)} 
+                       
                     />
-                            <MapSearch />
+                           
+                        {/* <MapSearch 
+                        /> */}
+                           
                 </ReactMapGL>
             </div>
-        </div>
-    </div>
+         </div>
+     </div>
   )
 }
+
+
 
 export default Map

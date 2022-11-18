@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ReactMapGL, {Marker, Popup } from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
-// import axios from 'axios'
+import axios from 'axios'
 import locationData from '../../Utils/mapdata.json'
 import skate from '../../assets/skateboarding.svg'
 
@@ -82,17 +82,15 @@ const Map = () => {
                         <Popup 
                             latitude={selectedPt.geometry.coordinates[1]}
                             longitude={selectedPt.geometry.coordinates[0]}
-                            anchor="bottom"
-                            width={300}
-                            height={300}
                             closeButton={true}
                             closeOnClick={false} 
                             closeOnMove={false}
-                            onClose={ () => {selectedPt(false) }}
+                            onClose={() => {selectedPt(null) }}
                             
                         >
                             <h2>{selectedPt.properties.name}</h2>
                             <p>{selectedPt.properties.description}</p>
+                            <p>Created on: {selectedPt.properties.created_at}</p>
                         </Popup>
                     ) : null}
                 </ReactMapGL>

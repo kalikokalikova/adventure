@@ -3,7 +3,7 @@ import ReactMapGL, {GeolocateControl, Marker, NavigationControl, Popup } from 'r
 import 'mapbox-gl/dist/mapbox-gl.css'
 import axios from 'axios'
 import locationData from '../../Utils/mapdata.json'
-import point from '../../assets/map-img/walk.svg'
+import point from '../../assets/map-img/map-pin.svg'
 import MapSearch from '../MapSearch/MapSearch'
 
 const Map = () => {
@@ -71,7 +71,7 @@ const Map = () => {
                                     console.log(selectedPt)
                                 }}
                             >
-                                <img class='bg-black border-black border-2 rounded-full w-20 h-20' src={point} alt='point icon' />
+                                <img class='w-20 h-20' src={point} alt='point icon' />
                             </button>
                         </Marker>
                     ))}

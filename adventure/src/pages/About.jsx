@@ -9,6 +9,7 @@ function About() {
   return (
     <div className='h-[100%] bg-white text-black'>
         {/* <NavBar/> */}
+        
        
       <div className='h-[30%] pb-[5%]'>
         <h1 className='font-poppins text-3xl font-bold text-center pt-[4rem]'>About Us</h1>
@@ -25,7 +26,7 @@ function About() {
                 <img src={naturePhone} alt="" className='md:w-[50%] w-[90%] md:mr-4'/>
             </div>
        </div>
-    <Testimonials/>
+       <Testimonials/>
     {/* <Footer/> */}
     </div>
   )

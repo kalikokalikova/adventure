@@ -5,12 +5,6 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 import locationData from '../../Utils/mapdata.json'
 import skate from '../../assets/skateboarding.svg'
 
-// const API_URL = 'https://adventure.mocklab.io/api/v1/points'
-
-// const getData = () => {
-//     return axios.get(API_URL).then((res) => res.data)
-// }
-
 const Map = () => {
     const [viewport, setViewport] = useState({
         latitude: 45.4211, 
@@ -37,12 +31,6 @@ const Map = () => {
     //     getData()
     // }, [])
 
-    // useEffect(() => {
-    //     getData().then((items) =>{
-    //         setLocation(items)
-    //     })
-    // }, [])
-    
   return (
     <div>
         <div class='flex items-center justify-center h-center'>
@@ -59,18 +47,12 @@ const Map = () => {
                             latitude={location.geometry.coordinates[1]}
                             longitude={location.geometry.coordinates[0]}
                         >
-                            <button>
-                                <img src={skate} alt='skate' />
+                            <button class='bg-transparent '>
+                                <img class='w-10 h-10' src={skate} alt='skate icon' />
                             </button>
                         </Marker>
                     ))}
                     {locationData.features.map((location) => console.log(location.geometry.coordinates[1]))}
-                    {/* {console.log(locationData.features[0].properties)} */}
-                    {/* {locationData.features.map(location => (
-                        <Marker>
-
-                        </Marker>
-                    ))} */}
                 </ReactMapGL>
             </div>
         </div>

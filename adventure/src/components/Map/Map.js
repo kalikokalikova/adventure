@@ -57,6 +57,7 @@ const Map = () => {
                     onMove={e => setViewport(e.viewport)}
                     mapStyle="mapbox://styles/mapbox/streets-v9"
                 >
+                    {/* when uing api change locationData to location */}
                     {locationData.features.map(location => (
                         <Marker
                             key={location.properties.id}

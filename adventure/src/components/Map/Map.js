@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import ReactMapGL, {Marker, Popup } from 'react-map-gl'
+import React, { useState, useEffect, useRef } from 'react'
+import ReactMapGL, {GeolocateControl, Marker, NavigationControl, Popup } from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import axios from 'axios'
 import locationData from '../../Utils/mapdata.json'
 import point from '../../assets/map-img/walk.svg'
+import MapSearch from '../MapSearch/MapSearch'
 
 const Map = () => {
     const [viewport, setViewport] = useState({
@@ -16,6 +17,8 @@ const Map = () => {
 
     const [location, setLocation] = useState([])
     const [selectedPt, setSelectedPt] = useState(null)
+
+    const mapRef = useRef()
 
     useEffect(() => {
         const listener = (e)=> {
@@ -53,7 +56,7 @@ const Map = () => {
                 <ReactMapGL 
                     {...viewport} 
                     mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-                    onMove={evt => setViewport(evt.viewport)}
+                    onMove={e => setViewport(e.viewport)}
                     mapStyle="mapbox://styles/mapbox/streets-v9"
                 >
                     {locationData.features.map(location => (
@@ -95,6 +98,12 @@ const Map = () => {
                             </div>
                         </Popup>
                     ) : null}
+                    <NavigationControl position='bottom-right' />
+                    <GeolocateControl
+                        position='top-left'
+                        trackUserLocation
+                        onGeolocate={e => setViewport(e.viewport)} 
+                    />
                 </ReactMapGL>
             </div>
         </div>

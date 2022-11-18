@@ -1,6 +1,6 @@
 import React from 'react'
-// import Footer from '../components/Footer'
-// import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
+import NavBar from '../components/NavBar'
 import Testimonials from '../components/Testimonials'
 import winterWalk from '../assets/eg-img/winter_walk.png'
 import naturePhone from '../assets/eg-img/nature-phone.png'
@@ -8,8 +8,7 @@ import naturePhone from '../assets/eg-img/nature-phone.png'
 function About() {
   return (
     <div className='h-[100%] bg-white text-black'>
-        {/* <NavBar/> */}
-       
+        <NavBar/>
       <div className='h-[30%] pb-[5%]'>
         <h1 className='font-poppins text-3xl font-bold text-center pt-[4rem]'>About Us</h1>
         <div className='flex flex-col md:flex-row justify-content items-center'>
@@ -25,8 +24,8 @@ function About() {
                 <img src={naturePhone} alt="" className='md:w-[50%] w-[90%] md:mr-4'/>
             </div>
        </div>
-    <Testimonials/>
-    {/* <Footer/> */}
+       <Testimonials/>
+    <Footer/>
     </div>
   )
 }

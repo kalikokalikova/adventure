@@ -1,6 +1,8 @@
-import React from 'react'
+import React from "react"
 import Elevation from "../assets/eg-img/elevation-img.svg"
-import {useState} from "react";
+import Graph from "../assets/eg-img/elevation-grapgh.svg"
+import {useState} from "react"
+
 
 function ResultsForm(props) {
 
@@ -50,9 +52,9 @@ function ResultsForm(props) {
                         className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                       >
                         <option>Elevation</option>
-                        <option>10</option>
-                        <option>20</option>
-                        <option>30</option>
+                        <option>Flat</option>
+                        <option>Moderate</option>
+                        <option>Hilly</option>
                       </select>
                     </div>
 

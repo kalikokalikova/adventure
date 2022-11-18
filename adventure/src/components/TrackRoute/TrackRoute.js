@@ -41,30 +41,38 @@ const INITIAL_VIEW_STATE = {
     );
   }
 
-const TrackRoute = () => {
+const TrackRoute = ({
+    points = data,
+    getWidth = 3,
+    mapStyle= MAP_STYLE
+}) => {
 
       const layer = new LineLayer({
-        id: 'line-layer',
-        data,
-        pickable: true,
-        getWidth: 50,
-        getSourcePosition: d => d.from.coordinates,
-        getTargetPosition: d => d.to.coordinates,
-        getColor: d => [Math.sqrt(d.inbound + d.outbound), 140, 0]
+        id: 'track',
+        data: data,
+        opacity: 0.8,
+        getSourcePosition: d => d.start,
+        getTargetPosition: d => d.end,
+        getColor,
+        getWidth,
+        pickable: true
       });
 
   return (
     <div>
-        <DeckGL 
-            viewState={viewState}
-            layers={[layer]}
-            getTooltip={({object}) => object && `${object.from.name} to ${object.to.name}`}
+        <DeckGL
+        layers={layers}
+        initialViewState={INITIAL_VIEW_STATE}
+        controller={true}
+        pickingRadius={5}
+        parameters={{
+            blendFunc: [GL.SRC_ALPHA, GL.ONE, GL.ONE_MINUS_DST_ALPHA, GL.ONE],
+            blendEquation: GL.FUNC_ADD
+        }}
+        getTooltip={getTooltip}
         >
-            <StaticMap>
-
-            </StaticMap>
-        </DeckGL> 
-
+        <StaticMap reuseMaps mapStyle={mapStyle} preventStyleDiffing={true} />
+        </DeckGL>
     </div>
   )
 }

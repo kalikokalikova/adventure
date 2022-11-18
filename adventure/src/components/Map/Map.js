@@ -18,8 +18,6 @@ const Map = () => {
     const [location, setLocation] = useState([])
     const [selectedPt, setSelectedPt] = useState(null)
 
-    const mapRef = useRef()
-
     useEffect(() => {
         const listener = (e)=> {
             if (e.key === 'Escape') {
@@ -104,6 +102,7 @@ const Map = () => {
                         trackUserLocation
                         onGeolocate={e => setViewport(e.viewport)} 
                     />
+                    <MapSearch />
                 </ReactMapGL>
             </div>
         </div>

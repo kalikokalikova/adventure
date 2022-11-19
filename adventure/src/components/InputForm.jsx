@@ -3,6 +3,7 @@ import {useState} from "react"
 import Pin from "../assets/eg-img/map-pin.svg"
 import Up from "../assets/eg-img/Arrow-up.png"
 import Down from "../assets/eg-img/Arrow-down.png"
+import { Link } from 'react-router-dom'
 
 function InputForm() {
     const [miles, setMiles] = useState(1);
@@ -20,7 +21,7 @@ function InputForm() {
             <div className="overflow-hidden">
                 <div className="">
                 <div className="font-poppins">
-                <div className="flex items-center col-span-6 bg-white py-1 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                <div className="flex items-center col-span-6 bg-white py-1 rounded-lg border-gray-300 shadow-sm focus:border-gray-400 focus:ring-gray-400">
                     <span className="px-3 text-md">
                           <img src={Pin} alt="map-pin"/>
                         </span>
@@ -28,7 +29,7 @@ function InputForm() {
                         type="text"
                         name="place"
                         id="place"
-                        defaultValue="Seattle, Washington"
+                        placeholder="where to?"
                         autoComplete="given-place"
                         className="rounded-full block w-full sm:text-lg"
                       />
@@ -75,9 +76,9 @@ function InputForm() {
             <br />
             <br />
 
-            <button className="block border w-full bg-[#ffd25a] shadow-md rounded-lg py-3 px-3 " type="submit">
-                Find a Route
-            </button>
+            <Link to="/results"> <button className="block border w-full bg-[#ffd25a] shadow-lg rounded-lg py-3 px-3  hover:bg-[#ffd35adc] hover:ease-in-out hover:duration-300 active:shadow-inner-md" type="submit">
+                Discover
+            </button></Link>
             </div>
                 </div>
 

@@ -8,7 +8,7 @@ import Map from '../components/Map/Map'
 
 function Home() {
   return (
-    <div className='bg-white text-black h-full '>
+    <div className='bg-white text-black h-auto overflow-x-hidden'>
       <NavBar/>
        {/* <div className='h-[8vh] md:flex  bg-[#69a1ac]'> </div> */}
 {/* MAP and INPUT container  */}
@@ -19,7 +19,7 @@ function Home() {
              
            </div>
 {/* MAP container  */}
-            <div className=' w-[100%] h-[83vh] bg-white border-solid border-2 md:h-[82vh] lg:w-[75%] '>
+            <div className=' w-[100%] h-[40%] bg-white border-solid border-2 md:h-[50%] lg:w-[75%] '>
               <Map />
             </div>
             

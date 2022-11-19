@@ -15,9 +15,9 @@ function Footer() {
   const handleForm = () => {
     setForm(!form)}
   return (
-    <div >
+    <div className='h-[10%]'>
 {/* Medium and large screen footer view  */}
-      <div className='bg-gradient-to-b from-[#b7dce0] md:from-[#f8d06a] to-transparent flex w-[100%] h-[10vh] items-center justify-end md:pr-4'>
+      <div className='bg-gradient-to-b from-[#b7dce0] md:from-[#f8d06a] to-transparent flex w-[100%] h-[10%] items-center justify-end md:pr-4'>
            <div className=' hidden md:flex w-[100%] h-[10vh] items-center justify-end pr-4'>  
              <p className='pl-2 text-lg'><Link>Follow Us</Link></p> 
            <p className='pl-2 text-lg'><Link><FaTwitter/></Link></p>
@@ -32,8 +32,8 @@ function Footer() {
             <p className='text-center font-poppins'>{!form ? 'My Walk' : 'View Map' }</p>
           </div>
           <div 
-          className={`bottom-0 w-[100%] bg-white text-black fixed h-[84vh] z-40 ease-in-out duration-300 ${
-            !form ? "translate-y-[100%] " : "translate-y-[-8%]"}`}
+          className={`top-[9%] w-[100%] h-[82%] left-0 bg-white text-black fixed  z-20 ease-in-out duration-300 ${
+            !form ? "translate-x-[-100%] " : "translate-x-[0]"}`}
           // className={!form ? 'fixed bottom-[-100%]' : 'fixed top-[4%] w-[100%] z-10 h-[83vh] bg-white ease-in-out duration-500' }
           >
             <ResultsForm/>

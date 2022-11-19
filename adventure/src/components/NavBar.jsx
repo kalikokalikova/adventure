@@ -9,8 +9,8 @@ function NavBar() {
     setNav(!nav);
   }
   return (
-    <div>
-        <div className=' flex justify-between w-[100%] bg-[#69a1ac] text-white'>
+    <div className='h-[10%]'>
+        <div className=' flex justify-between w-[100%] bg-[#69a1ac] text-white z-30'>
                 <Link to="/"><h1 className='w-[20%] font-lobster text-4xl p-4'>Strolls</h1></Link>
             <ul className='hidden md:flex justify-around items-center md:w-[60%] lg:w-[40%] font-poppins '>
                 <li><Link to="/home">Home</Link></li>

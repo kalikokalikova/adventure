@@ -1,12 +1,10 @@
 import React from "react"
-import Footer from '../components/Footer'
-import NavBar from '../components/NavBar'
-import Elevation from "../assets/eg-img/elevation-img.svg"
-import Graph from "../assets/eg-img/elevation-grapgh.svg"
+
 import {useState} from "react"
 import Pin from "../assets/eg-img/map-pin.svg"
 import Up from "../assets/eg-img/Arrow-up.png"
 import Down from "../assets/eg-img/Arrow-down.png"
+import { Link } from "react-router-dom"
 
 function ResultsForm(props) {
   const [miles, setMiles] = useState(1);
@@ -33,8 +31,8 @@ function ResultsForm(props) {
                         type="text"
                         name="place"
                         id="place"
-                        placeholder={props.search}
-                        defaultValue={props.search}
+                        placeholder="San Francisco, CA"
+                        defaultValue="San Francisco, CA"
                         autoComplete="given-place"
                         className="rounded-full block w-full  sm:text-lg"
                       />
@@ -79,12 +77,12 @@ function ResultsForm(props) {
                 
                 </div>
                 <div className="py-3 flex justify-center">
-                        <button
+                       <Link to="/home"> <button
                             type="submit"
                             className="rounded-md border border-transparent bg-[#ffd25a] hover:bg-[#ffd35adc] hover:ease-in-out hover:duration-300 active:shadow-inner-md py-2 px-4 text-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                         >
-                            Re-Route
-                        </button>
+                            New Adventure
+                        </button></Link>
 
                     </div>
               </div>

@@ -53,7 +53,7 @@ const Map = () => {
     <div>
         <div>
             <div 
-            className='mapboxgl-map w-[100%] h-[83vh] bg-white border-solid border-2 md:h-[82vh] lg:w-[100%] '>
+            className='mapboxgl-map w-[100%] h-[80vh] bg-white border-solid border-2 md:h-[82vh] lg:w-[100%] '>
                 <ReactMapGL 
                     {...viewport} 
                     mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}

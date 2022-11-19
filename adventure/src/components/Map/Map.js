@@ -9,12 +9,13 @@ import {IoMdPhotos} from 'react-icons/io'
 
 const Map = () => {
     const [viewport, setViewport] = useState({
-        latitude: 45.4211, 
-        longitude: -75.6903,
-        zoom: 9,
+        latitude: 37.77078872085789, 
+        longitude: -122.43356346594742,
+        zoom: 12,
         width: '100vw',
         height: '100vh'
     })
+     
 
     const [location, setLocation] = useState([])
     const [selectedPt, setSelectedPt] = useState(null)

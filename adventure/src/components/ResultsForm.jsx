@@ -75,20 +75,13 @@ function ResultsForm(props) {
                       </select>
                     </div>
                     </div>
-
-                    <div className="flex justify-between items-center col-span-6 sm:col-span-6">
-                      <label htmlFor="distance" className="block text-2xl font-medium text-gray-700">
-                        Distance: {props.miles} mi.
-                      </label>
-                    </div>
-
                   </div>
                 
                 </div>
                 <div className="py-3 flex justify-center">
                         <button
                             type="submit"
-                            className="rounded-md border border-transparent bg-[#ffd25a] hover:bg-[#ffd35adc] hover:ease-in-out hover:duration-300 active:shadow-inner-md py-2 px-4 text-lg shadow-lg hover:bg-[#ffd25a] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                            className="rounded-md border border-transparent bg-[#ffd25a] hover:bg-[#ffd35adc] hover:ease-in-out hover:duration-300 active:shadow-inner-md py-2 px-4 text-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                         >
                             Re-Route
                         </button>

@@ -5,11 +5,19 @@ import Elevation from "../assets/eg-img/elevation-img.svg"
 import Graph from "../assets/eg-img/elevation-grapgh.svg"
 import {useState} from "react"
 import Pin from "../assets/eg-img/map-pin.svg"
+import Up from "../assets/eg-img/Arrow-up.png"
+import Down from "../assets/eg-img/Arrow-down.png"
 
 function ResultsForm(props) {
+  const [miles, setMiles] = useState(1);
+  let elevation = 1;
 
-const [miles, setMiles] = useState(1);
-let elevation = 1;
+  const increase = () => {
+      setMiles(miles + 1)
+  }
+  const decrease = () => {
+      if(miles > 0) setMiles(miles - 1)
+  }
   
   return (
            <form action="#" method="POST">
@@ -33,15 +41,19 @@ let elevation = 1;
                     </div>
 
                     <div className="flex items-center justify-between  col-span-6 sm:col-span-6">
-                    <div className="flex items-center border-gray-200 border-2 shadow-lg w-[20%]">
+                    <div className="flex items-center">
+                        <div>
+                            <img src={Up} alt="arrow-up" onClick={increase}/>
+                            <img src={Down} alt="arrow-down" onClick={decrease}/>
+                        </div>
                       <input
-                        type="number"
+                        type="text"
                         name="miles"
                         id="miles"
                         defaultValue={1}
                         value={miles}
                         autoComplete="number-miles"
-                        className="text-center block w-1/3 mr-2 rounded-md  sm:text-md"
+                        className="text-center block w-1/5 ml-1 mr-2 rounded-lg border-gray-300 shadow-sm sm:text-md"
                       />
                         <label htmlFor="miles" className="mt-1 block text-md font-medium">
                         miles
@@ -54,7 +66,7 @@ let elevation = 1;
                         name="elevation"
                         placeholder="Elevation"
                         autoComplete="elevation-value"
-                        className="mt-1 block text-center pl-3 py-2 rounded-full border border-[#69A1AC] bg-white shadow-sm focus:border-[#69A1AC] focus:outline-none focus:ring-[#69A1AC] sm:text-sm"
+                        className="hidden mt-1 block text-center pl-3 py-2 rounded-full border border-[#69A1AC] bg-white shadow-sm focus:border-[#69A1AC] focus:outline-none focus:ring-[#69A1AC] sm:text-sm"
                       >
                         <option>Elevation</option>
                         <option>Flat</option>
@@ -68,28 +80,6 @@ let elevation = 1;
                       <label htmlFor="distance" className="block text-2xl font-medium text-gray-700">
                         Distance: {props.miles} mi.
                       </label>
-                    </div>
-
-                    <div className="bg-white rounded-md px-4 col-span-6 rounded-lg md:h-[20vh]">
-                        <div className="flex justify-between mt-3 w-full sm:text-md md:flex md:w-[98%] lg:w-[98%]'">
-                        <div className="flex">
-                        <div className="mr-2">
-                            <img src={Elevation} alt="elevation-img"/>
-                        </div>
-                        <div>
-                            <h2>Elevation</h2>
-                        </div>
-                        </div>
-                        
-                        <div className="text-right">
-                          <h2 className="inline-flex justify-end rounded-md text-sm font-medium">
-                            {elevation} ft
-                          </h2>
-                        </div>
-                        </div>
-                        <div className="mt-6">
-                          <img src={Graph} alt="graph-example"/>
-                        </div>
                     </div>
 
                   </div>

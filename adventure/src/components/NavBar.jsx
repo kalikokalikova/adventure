@@ -12,12 +12,14 @@ function NavBar() {
     <div>
         <div className=' flex justify-between w-[100%] bg-[#69a1ac] text-white'>
                 <Link to="/"><h1 className='w-[20%] font-lobster text-4xl p-4'>Strolls</h1></Link>
-            <ul className='hidden md:flex justify-around items-center w-[60%] font-poppins '>
+            <ul className='hidden md:flex justify-around items-center md:w-[60%] lg:w-[40%] font-poppins '>
                 <li><Link to="/home">Home</Link></li>
                 <li><Link to="/about">About Us</Link></li>
                 <li><Link to="">Log In</Link></li>
                 <li>
-                    <button className='bg-[#ffd25a] hover:bg-[#ffd35adc] hover:ease-in-out hover:duration-300 active:shadow-inner-md text-black w-[60%] px-[2rem] py-1 rounded-lg shadow-lg'>
+                    <button 
+                    className='bg-[#ffd25a] hover:bg-[#ffd35adc] hover:ease-in-out hover:duration-300 active:shadow-inner-md
+                     text-black w-[100%] px-4 py-1 rounded-lg shadow-lg'>
                         <Link to="">Sign Up</Link>
                         </button>
                     </li>

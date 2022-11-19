@@ -1,4 +1,4 @@
-#Walking Adventure
+# Walking Adventure
 
 This app was created for the Girl Develop It Hackathon 2022 looking to provide a service for wellness and health trough encouraging users to walk in order to achieve their fitness goals and to explore different routes. In general, this application allows for the user to pick a location and then randomizes and area to explore around that location. In addition, the users can share pictures of the amazing sights and places they found on their paths, this, to invite others to explore this new found gems and to have a visual reminder of all the adventures and places conquered.
 

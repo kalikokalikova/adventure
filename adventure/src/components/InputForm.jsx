@@ -5,6 +5,7 @@ import Up from "../assets/eg-img/Arrow-up.png"
 import Down from "../assets/eg-img/Arrow-down.png"
 import { Link } from 'react-router-dom'
 import PhotoCarousel from './PhotoCarousel'
+import UploadPhoto from '../components/photoUploader/UploadPhoto'
 
 function InputForm() {
     const [miles, setMiles] = useState(1);
@@ -19,7 +20,7 @@ function InputForm() {
 
     return (
       <div>
-        <form className="rounded px-3 pt-10 pb-10 m-[5rem]">
+        <form className="rounded px-3 pt-10 pb-10 ">
             <div className="overflow-hidden">
                 <div className="">
                 <div className="font-poppins">
@@ -87,6 +88,7 @@ function InputForm() {
 
               </div>
         </form>
+        <UploadPhoto/>
         <PhotoCarousel/>
         </div>
     )

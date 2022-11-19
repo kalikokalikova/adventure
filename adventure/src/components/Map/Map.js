@@ -5,6 +5,7 @@ import axios from 'axios'
 import locationData from '../../Utils/mapdata.json'
 import point from '../../assets/map-img/map-pin.svg'
 import MapSearch from '../MapSearch/MapSearch'
+import { PathLayer } from '@deck.gl/layers'
 
 const Map = () => {
     const [viewport, setViewport] = useState({

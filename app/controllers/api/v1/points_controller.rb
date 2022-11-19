@@ -1,9 +1,11 @@
 class Api::V1::PointsController < ApplicationController
-  before_action :set_point, only: %i[ show update destroy ]
+    before_action :set_point, only: %i[ show update destroy ]
 
-  # GET /points
+    # GET /points
   def index
-    @points = Point.all
+    params[:ulongitude] = params[:ulongitude].to_d
+    params[:zoom] = params[:zoom].to_i
+    @points = Point.within_zoom(params)
 
     render json: @points
   end
@@ -46,6 +48,6 @@ class Api::V1::PointsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def point_params
-      params.require(:point).permit(:name, :description)
+      params.require(:point).permit(:name, :description, :latitude, :longitude)
     end
 end

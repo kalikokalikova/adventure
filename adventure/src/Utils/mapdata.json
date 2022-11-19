@@ -1,64 +1,64 @@
 {
     "features": [
-      {
-        "type": "Feature",
-        "properties": {
-          "id": 1,
-          "name": "Fremont Troll",
-          "updated_at": "2022/11/18",
-          "created_at": "2022/11/17",
-          "description": "Mildly overrated troll-shaped dirt under bridge",
-          "image_1": null,
-          "image_2": null,
-          "image_3": null
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 1,
+                "name": "Fremont Troll",
+                "updated_at": "2022/11/18",
+                "created_at": "2022/11/17",
+                "description": "Mildly overrated troll-shaped dirt under bridge",
+                "image_1": null,
+                "image_2": null,
+                "image_3": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.3372987731628,
+                    45.383321536272049
+                ]
+            }
         },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -75.3372987731628,
-            45.383321536272049
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "id": 2,
-          "name": "Dahlia garden",
-          "updated_at": "2022/11/17",
-          "created_at": "2022/10/16",
-          "description": "Someone's pretty yard! Also, opium poppies",
-          "image_1": null,
-          "image_2": null,
-          "image_3": null
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 2,
+                "name": "Dahlia garden",
+                "updated_at": "2022/11/17",
+                "created_at": "2022/10/16",
+                "description": "Someone's pretty yard! Also, opium poppies",
+                "image_1": null,
+                "image_2": null,
+                "image_3": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.546518086577947,
+                    45.467134581917357
+                ]
+            }
         },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -75.546518086577947,
-            45.467134581917357
-          ]
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 3,
+                "name": "Secret Solstice Park",
+                "updated_at": "2022/11/10",
+                "created_at": "2020/01/23",
+                "description": "Go here on the solstice at sunset, the sun lines up with the sculpture",
+                "image_1": null,
+                "image_2": null,
+                "image_3": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.898610599532319,
+                    45.295014379864874
+                ]
+            }
         }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "id": 3,
-          "name": "Secret Solstice Park",
-          "updated_at": "2022/11/10",
-          "created_at": "2020/01/23",
-          "description": "Go here on the solstice at sunset, the sun lines up with the sculpture",
-          "image_1": null,
-          "image_2": null,
-          "image_3": null
-        },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -75.898610599532319,
-            45.295014379864874
-          ]
-        }
-      }
     ]
-  }
+}

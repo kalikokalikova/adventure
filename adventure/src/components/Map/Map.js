@@ -100,9 +100,9 @@ const Map = () => {
                                 <div className='w-[30%]'>
                                     <img 
                                     className='p-2 w-[100%]'
-                                        src={point}
+                                        src={selectedPt.properties.image_1}
                                             // {selectedPt.properties.image_1} 
-                                         alt="image"/>
+                                         alt="interest point"/>
                                 </div>
                                 <div className='w-[60%]'>
                                     <h2 className='font-poppins text-lg font-bold py-2'>{selectedPt.properties.name}</h2>

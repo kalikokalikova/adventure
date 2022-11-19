@@ -19,8 +19,8 @@ function InputForm() {
     }
 
     return (
-      <div>
-        <form className="rounded px-3 pt-10 pb-10 ">
+      <div className='flex-col justify-center items-center'>
+        <form className="rounded px-3 pt-10 pb-2 ">
             <div className="overflow-hidden">
                 <div className="">
                 <div className="font-poppins">
@@ -88,8 +88,9 @@ function InputForm() {
 
               </div>
         </form>
-        <UploadPhoto/>
-        <PhotoCarousel/>
+        <div className='hidden h-[50%] translate-y-[-15%]'><UploadPhoto/></div>
+        <div className='mt-[5rem]'><PhotoCarousel/></div>
+        
         </div>
     )
 }

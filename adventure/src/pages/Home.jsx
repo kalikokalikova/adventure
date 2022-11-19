@@ -2,7 +2,6 @@ import React from 'react'
 import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
 import InputForm from '../components/InputForm'
-import Testimonials from '../components/Testimonials'
 import Map from '../components/Map/Map'
 
 

@@ -101,6 +101,7 @@ const Map = () => {
                                     <img 
                                     className='p-2 w-[100%]'
                                         src={point}
+                                        
                                             // {selectedPt.properties.image_1} 
                                          alt="image"/>
                                 </div>

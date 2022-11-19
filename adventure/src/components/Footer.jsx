@@ -7,6 +7,7 @@ import {IoMdWalk} from 'react-icons/io'
 import {MdOutlineAddAPhoto} from 'react-icons/md'
 import { useState } from 'react'
 import ResultsForm from './ResultsForm'
+import InputForm from './InputForm'
 
 
 function Footer() {
@@ -32,11 +33,11 @@ function Footer() {
             <p className='text-center font-poppins'>{!form ? 'My Walk' : 'View Map' }</p>
           </div>
           <div 
-          className={`top-[9%] w-[100%] h-[82%] left-0 bg-white text-black fixed  z-20 ease-in-out duration-300 ${
+          className={`top-[9%] w-[100%] h-[80%] left-0 bg-white text-black fixed  z-20 ease-in-out duration-300 ${
             !form ? "translate-x-[-100%] " : "translate-x-[0]"}`}
           // className={!form ? 'fixed bottom-[-100%]' : 'fixed top-[4%] w-[100%] z-10 h-[83vh] bg-white ease-in-out duration-500' }
           >
-            <ResultsForm/>
+            <InputForm/>
           </div>
               
          

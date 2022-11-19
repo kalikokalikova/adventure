@@ -4,6 +4,7 @@ import Pin from "../assets/eg-img/map-pin.svg"
 import Up from "../assets/eg-img/Arrow-up.png"
 import Down from "../assets/eg-img/Arrow-down.png"
 import { Link } from 'react-router-dom'
+import PhotoCarousel from './PhotoCarousel'
 
 function InputForm() {
     const [miles, setMiles] = useState(1);
@@ -17,7 +18,8 @@ function InputForm() {
     }
 
     return (
-        <form className="rounded px-3 pt-10 pb-10">
+      <div>
+        <form className="rounded px-3 pt-10 pb-10 m-[5rem]">
             <div className="overflow-hidden">
                 <div className="">
                 <div className="font-poppins">
@@ -57,7 +59,7 @@ function InputForm() {
                       </label>
                     </div>
 
-                    <div className="">
+                    <div>
                       <select
                         id="elevation"
                         name="elevation"
@@ -75,17 +77,18 @@ function InputForm() {
 
             <br />
             <br />
-
-            <Link to="/results"> <button className="block border w-full bg-[#ffd25a] shadow-lg rounded-lg py-3 px-3  hover:bg-[#ffd35adc] hover:ease-in-out hover:duration-300 active:shadow-inner-md" type="submit">
+            <div className='flex justify-center w-full'>  
+              <Link to="/home"> <button className=" border w-[100%] px-6  bg-[#ffd25a] shadow-lg rounded-lg py-3 hover:bg-[#ffd35adc] hover:ease-in-out hover:duration-300 active:shadow-inner-md" type="submit">
                 Discover
-            </button></Link>
+            </button></Link></div>
+          
             </div>
                 </div>
 
               </div>
         </form>
-
-
+        <PhotoCarousel/>
+        </div>
     )
 }
 

@@ -12,16 +12,12 @@ const [miles, setMiles] = useState(1);
 let elevation = 1;
   
   return (
-  
-
- 
-   
            <form action="#" method="POST">
               <div className="overflow-hidden">
-                <div className="px-4 py-5 sm:p-6">
+              <h1 className="font-poppins text-2xl font-bold w-[100%] text-center pt-5"> My Walk </h1>
+                <div className="px-10 py-5 sm:p-6">
                   <div className="font-poppins grid grid-cols-6 gap-6">
-
-                    <div className="flex items-center col-span-6 bg-white py-1 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                    <div className="flex items-center col-span-6 bg-white py-1 rounded-lg border-gray-200 border-2 shadow-lg focus:border-indigo-500 focus:ring-indigo-500">
                     <span className="px-3 text-md">
                           <img src={Pin} alt="map-pin"/>
                         </span>
@@ -32,12 +28,12 @@ let elevation = 1;
                         placeholder={props.search}
                         defaultValue={props.search}
                         autoComplete="given-place"
-                        className="rounded-full block w-full sm:text-lg"
+                        className="rounded-full block w-full  sm:text-lg"
                       />
                     </div>
 
-                    <div className="flex items-center justify-between col-span-6 sm:col-span-6">
-                    <div className="flex items-center">
+                    <div className="flex items-center justify-between  col-span-6 sm:col-span-6">
+                    <div className="flex items-center border-gray-200 border-2 shadow-lg w-[20%]">
                       <input
                         type="number"
                         name="miles"
@@ -45,7 +41,7 @@ let elevation = 1;
                         defaultValue={1}
                         value={miles}
                         autoComplete="number-miles"
-                        className="text-center block w-1/3 mr-2 rounded-md border-gray-300 shadow-sm sm:text-md"
+                        className="text-center block w-1/3 mr-2 rounded-md  sm:text-md"
                       />
                         <label htmlFor="miles" className="mt-1 block text-md font-medium">
                         miles
@@ -70,18 +66,8 @@ let elevation = 1;
 
                     <div className="flex justify-between items-center col-span-6 sm:col-span-6">
                       <label htmlFor="distance" className="block text-2xl font-medium text-gray-700">
-                        {props.miles} miles
+                        Distance: {props.miles} mi.
                       </label>
-
-                      <div className="py-3">
-                        <button
-                            type="submit"
-                            className="rounded-md border border-transparent bg-[#ffd25a] py-2 px-4 text-lg shadow-lg hover:bg-[#ffd25a] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                        >
-                            Re-Route
-                        </button>
-
-                    </div>
                     </div>
 
                     <div className="bg-white rounded-md px-4 col-span-6 rounded-lg md:h-[20vh]">
@@ -107,9 +93,19 @@ let elevation = 1;
                     </div>
 
                   </div>
+                
                 </div>
+                <div className="py-3 flex justify-center">
+                        <button
+                            type="submit"
+                            className="rounded-md border border-transparent bg-[#ffd25a] hover:bg-[#ffd35adc] hover:ease-in-out hover:duration-300 active:shadow-inner-md py-2 px-4 text-lg shadow-lg hover:bg-[#ffd25a] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                        >
+                            Re-Route
+                        </button>
 
+                    </div>
               </div>
+             
             </form>
    
   )

@@ -62,7 +62,7 @@ function InputForm() {
                         name="elevation"
                         placeholder="Elevation"
                         autoComplete="elevation-value"
-                        className="mt-1 block text-center pl-3 py-2 rounded-full border border-[#69A1AC] bg-white shadow-sm focus:border-[#69A1AC] focus:outline-none focus:ring-[#69A1AC] sm:text-sm"
+                        className="hidden mt-1 block text-center pl-3 py-2 rounded-full border border-[#69A1AC] bg-white shadow-sm focus:border-[#69A1AC] focus:outline-none focus:ring-[#69A1AC] sm:text-sm"
                       >
                         <option>Elevation</option>
                         <option>Flat</option>

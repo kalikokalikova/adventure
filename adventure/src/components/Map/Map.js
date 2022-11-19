@@ -10,13 +10,12 @@ import '../../index.css'
 
 const Maps = () => {
     const [viewport, setViewport] = useState({
-        latitude: 37.77078872085789, 
-        longitude: -122.43356346594742,
+        latitude: 47.611436559932294, 
+        longitude: -122.34186710726482,
         zoom: 12,
         width: '100vw',
         height: '100vh'
     })
-     
 
     const [location, setLocation] = useState([])
     const [selectedPt, setSelectedPt] = useState(null)

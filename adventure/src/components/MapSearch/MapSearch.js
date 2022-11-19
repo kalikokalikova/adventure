@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder'
 import { useControl } from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'

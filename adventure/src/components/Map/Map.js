@@ -3,18 +3,19 @@ import ReactMapGL, {GeolocateControl, Marker, NavigationControl, Popup } from 'r
 import 'mapbox-gl/dist/mapbox-gl.css'
 import axios from 'axios'
 import locationData from '../../Utils/mapdata.json'
-import point from '../../assets/map-img/walk.svg'
+import point from '../../assets/map-img/map-pin.svg'
 import MapSearch from '../MapSearch/MapSearch'
 import {IoMdPhotos} from 'react-icons/io'
 
 const Map = () => {
     const [viewport, setViewport] = useState({
-        latitude: 45.4211, 
-        longitude: -75.6903,
-        zoom: 9,
+        latitude: 37.77078872085789, 
+        longitude: -122.43356346594742,
+        zoom: 12,
         width: '100vw',
         height: '100vh'
     })
+     
 
     const [location, setLocation] = useState([])
     const [selectedPt, setSelectedPt] = useState(null)
@@ -60,6 +61,7 @@ const Map = () => {
                     mapStyle="mapbox://styles/mapbox/streets-v11"
                     
                 >
+                    {/* when uing api change locationData to location */}
                     {locationData.features.map(location => (
                         <Marker
                             key={location.properties.id}

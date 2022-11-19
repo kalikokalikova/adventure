@@ -1,64 +1,264 @@
 {
-    "features": [
-      {
-        "type": "Feature",
-        "properties": {
-          "id": 1,
-          "name": "Fremont Troll",
-          "updated_at": "2022/11/18",
-          "created_at": "2022/11/17",
-          "description": "Mildly overrated troll-shaped dirt under bridge",
-          "image_1": null,
-          "image_2": null,
-          "image_3": null
-        },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -75.3372987731628,
-            45.383321536272049
-          ]
-        }
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "name": "House Mural",
+        "updated_at": "2022/11/18",
+        "created_at": "11/6/2022",
+        "description": "House art on a house haha. I gotta come back here in the daytime but I love this style.",
+        "image_1": "../../assets/carousel-img/housemural.jpg",
+        "image_2": null,
+        "image_3": null
       },
-      {
-        "type": "Feature",
-        "properties": {
-          "id": 2,
-          "name": "Dahlia garden",
-          "updated_at": "2022/11/17",
-          "created_at": "2022/10/16",
-          "description": "Someone's pretty yard! Also, opium poppies",
-          "image_1": null,
-          "image_2": null,
-          "image_3": null
-        },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -75.546518086577947,
-            45.467134581917357
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "id": 3,
-          "name": "Secret Solstice Park",
-          "updated_at": "2022/11/10",
-          "created_at": "2020/01/23",
-          "description": "Go here on the solstice at sunset, the sun lines up with the sculpture",
-          "image_1": null,
-          "image_2": null,
-          "image_3": null
-        },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -75.898610599532319,
-            45.295014379864874
-          ]
-        }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40364923013956,
+          37.76068122656553
+        ]
       }
-    ]
-  }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "name": "Garage Art",
+        "updated_at": "2022/11/17",
+        "created_at": "2022/10/16",
+        "description": " It took me forever to see the bear! It’s like a street art Monet",
+        "image_1": null,
+        "image_2": null,
+        "image_3": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41858479929094,
+          37.76367466576563
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "name": "Secret Spirit House",
+        "updated_at": "2022/11/10",
+        "created_at": "2020/01/23",
+        "description": "Spirit house in a beautiful garden in my neighborhood. These shrines are home to protective spirits.",
+        "image_1": null,
+        "image_2": null,
+        "image_3": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.46837002979552,
+          37.76788744903263
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "name": "Dog in a Window",
+        "updated_at": "2022/11/10",
+        "created_at": "2020/01/23",
+        "description": "This guy is always in the window every day. I think he’s waiting for another package.",
+        "image_1": null,
+        "image_2": null,
+        "image_3": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.44025189256688,
+          37.79099805472744
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "name": "Painted Bus",
+        "updated_at": "2022/11/10",
+        "created_at": "2020/01/23",
+        "description": "Spotted the Love Tours bus near Alto Park! I’ve always wanted to try vanlife in a bus like this.",
+        "image_1": null,
+        "image_2": null,
+        "image_3": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.44669924451783,
+          37.76868245454373
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "name": "Piece of Golden Gate Bridge",
+        "updated_at": "2022/11/10",
+        "created_at": "2020/01/23",
+        "description": "Found this while walking near the bay. Is this real or a sculpture?",
+        "image_1": null,
+        "image_2": null,
+        "image_3": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.47671431419415,
+          37.81000208230476
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "name": "House Flowers",
+        "updated_at": "2022/11/10",
+        "created_at": "2020/01/23",
+        "description": "In love with these flowers. Does anyone now if this is wisteria?",
+        "image_1": null,
+        "image_2": null,
+        "image_3": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.49003712235734,
+          37.78645409474004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 8,
+        "name": "Night Building",
+        "updated_at": "2022/11/10",
+        "created_at": "2020/01/23",
+        "description": "JW Pierce designed this building in 1997. It reminds me of ocean waves.",
+        "image_1": null,
+        "image_2": null,
+        "image_3": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40063482717046,
+          37.785553144100774
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "name": "Motorcycle",
+        "updated_at": "2022/11/10",
+        "created_at": "2020/01/23",
+        "description": "One of the coolest bikes I’ve ever seen. The owner was there and told me he rode cross country on it.",
+        "image_1": null,
+        "image_2": null,
+        "image_3": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.43819453522167,
+          37.77637282785273
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "name": "Golden Squirrel",
+        "updated_at": "2022/11/10",
+        "created_at": "2020/01/23",
+        "description": "Squirrel motif carved into a stair bannister. Can you guess which bookstore this is in?",
+        "image_1": null,
+        "image_2": null,
+        "image_3": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.43293542921293,
+          37.77198788873139
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "name": "Chinatown Street Art",
+        "updated_at": "2022/11/10",
+        "created_at": "2020/01/23",
+        "description": "Found outside a market off of Grove st. Lots of loose leaf teas, herbs, etc.",
+        "image_1": null,
+        "image_2": null,
+        "image_3": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40836953133902,
+          37.79689971758457
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "name": "Animal Figurines",
+        "updated_at": "2022/11/10",
+        "created_at": "2020/01/23",
+        "description": "Love these little pig figurines! This shop sells all kinds of imported goods. I took a pig home with me today.",
+        "image_1": null,
+        "image_2": null,
+        "image_3": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4062458408065,
+          37.794455341482546
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "name": "Street Performer",
+        "updated_at": "2022/11/10",
+        "created_at": "2020/01/23",
+        "description": "I walk here every sunday to listen to these guys play. Classical Chinese instruments and amazing performers!s",
+        "image_1": null,
+        "image_2": null,
+        "image_3": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41838354803173,
+          37.78536664226011
+        ]
+      }
+    }
+  ]
+}

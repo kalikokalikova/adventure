@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
-//import Map from '../components/Map/Map'
+import Map from '../components/Map/Map'
 import ResultsForm from '../components/ResultsForm'
 
 function Results() {
@@ -17,7 +17,7 @@ function Results() {
            </div>
 {/* MAP container  */}
             <div className=' w-[100%] h-[83vh] bg-white border-solid border-2 md:h-[82vh] lg:w-[75%] '>
-              {/*<Map />*/}
+              <Map />
             </div>
             
         </div>

@@ -14,7 +14,7 @@ function About() {
         <div className='h-[30%] pb-[2%]'>
             <h1 className='font-poppins text-3xl font-bold text-center pt-[4rem]'>Our Mission</h1>
             <div className='flex flex-col-reverse md:flex-row justify-content items-center'>
-                <p className='font-poppins pt-6 text-center px-2 md:text-left md:ml-4 md:px-4 md:w[50%] lg:mx-[10rem] '> Strolls: A Walking Adventure is here to make walking fun and interactive. Our app pairs walking with the thrill of discovery and a deeper connection to our neighborhoods, leading to a happier, healthier community. </p>
+                <p className='font-poppins pt-6 text-center px-2 md:text-left md:ml-4 md:px-4 md:w[50%] lg:text-xl lg:mx-[10rem] '> Strolls: A Walking Adventure is here to make walking fun and interactive. Our app pairs walking with the thrill of discovery and a deeper connection to our neighborhoods, leading to a happier, healthier community. </p>
                 <img src={naturePhone} alt="" className='md:w-[50%] w-[90%] md:mr-4'/>
             </div>
        </div>
@@ -23,7 +23,7 @@ function About() {
         <h1 className='font-poppins text-3xl font-bold text-center pb-5  pt-[4rem]'>About Us</h1>
         <div className='flex flex-col md:flex-row justify-content items-center'>
             <img src={groupPhoto} alt="" className='md:w-[40%] w-[80%] md:ml-4'/>
-        <p className='font-poppins text-center pt-6 px-6 md:text-right md:mr-4 md:px-4 md:w-[50%] '> The Strolls team is a mix of developers, designers, mentors, and product managers! We all met during the Girl Develop It Hackathon and collaborated to create this app from the ground up! 
+        <p className='font-poppins text-center pt-6 px-6 md:text-right md:mr-4 md:px-4 lg:text-xl md:w-[50%] '> The Strolls team is a mix of developers, designers, mentors, and product managers! We all met during the Girl Develop It Hackathon and collaborated to create this app from the ground up! 
         We come from a diverse background of skillsets, and pride ourselves in organization, communication, mentorship, and supporting our teammates. 
         <br /> Strolls is built with a Ruby on Rails back end and React.js front end. All our styling is done with TailwindCSS, and our designs with Figma. To keep us organized, we used a kanban board on Trello.  </p>
         </div>

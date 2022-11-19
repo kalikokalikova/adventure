@@ -59,6 +59,86 @@
             45.295014379864874
           ]
         }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": 3,
+          "name": "Secret Solstice Park",
+          "updated_at": "2022/11/10",
+          "created_at": "2020/01/23",
+          "description": "Go here on the solstice at sunset, the sun lines up with the sculpture",
+          "image_1": null,
+          "image_2": null,
+          "image_3": null
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -75.898610599532319,
+            45.295014379864874
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": 3,
+          "name": "Secret Solstice Park",
+          "updated_at": "2022/11/10",
+          "created_at": "2020/01/23",
+          "description": "Go here on the solstice at sunset, the sun lines up with the sculpture",
+          "image_1": null,
+          "image_2": null,
+          "image_3": null
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -75.898610599532319,
+            45.295014379864874
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": 3,
+          "name": "Secret Solstice Park",
+          "updated_at": "2022/11/10",
+          "created_at": "2020/01/23",
+          "description": "Go here on the solstice at sunset, the sun lines up with the sculpture",
+          "image_1": null,
+          "image_2": null,
+          "image_3": null
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -75.898610599532319,
+            45.295014379864874
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": 3,
+          "name": "Secret Solstice Park",
+          "updated_at": "2022/11/10",
+          "created_at": "2020/01/23",
+          "description": "Go here on the solstice at sunset, the sun lines up with the sculpture",
+          "image_1": null,
+          "image_2": null,
+          "image_3": null
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -75.898610599532319,
+            45.295014379864874
+          ]
+        }
       }
     ]
   }

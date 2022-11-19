@@ -1,7 +1,8 @@
 import React from 'react'
 import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
-
+import InputForm from '../components/InputForm'
+import Testimonials from '../components/Testimonials'
 import Map from '../components/Map/Map'
 
 
@@ -14,6 +15,7 @@ function Home() {
     <div className='flex flex-col items-start justify-center md:flex-row bg-white h-[100%]'>
 {/* Input container */}
            <div className='hidden bg-[#b7dce0] bg-opacity-60 md:flex  md:h-[82vh] md:w-[45%] lg:w-[25%]'>
+            <InputForm/>
              
            </div>
 {/* MAP container  */}

@@ -6,6 +6,7 @@ import locationData from '../../Utils/mapdata.json'
 import point from '../../assets/map-img/map-pin.svg'
 import MapSearch from '../MapSearch/MapSearch'
 import {IoMdPhotos} from 'react-icons/io'
+import '../../index.css'
 
 const Maps = () => {
     const [viewport, setViewport] = useState({
@@ -93,23 +94,24 @@ const Maps = () => {
                             closeOnClick={false} 
                             closeOnMove={false}
                             onClose={() => setSelectedPt(null)}
-                        
+
                             
                         >
-                            <div className='flex items-center justify-start'>
-                                <div className='w-[30%]'>
+                            <div className='mapboxgl-popup-content flex items-center justify-start w-[40vh] h-[25vh] rounded-lg'>
+                               
+                                    <div className='w-[100%] rounded-lg'>
                                     <img 
-                                    className='p-2 w-[100%]'
+                                    className='p-2 w-[60%] h-[50%] rounded-md object-cover'
                                         src={selectedPt.properties.image_1} 
-                                        
-                                            // {selectedPt.properties.image_1} 
                                          alt="image"/>
                                 </div>
-                                <div className='w-[60%]'>
+                                <div className='w-[100%]'>
                                     <h2 className='font-poppins text-lg font-bold py-2'>{selectedPt.properties.name}</h2>
-                                        <p className='font-poppins text-md'>{selectedPt.properties.description}</p>
+                                    <p className='font-poppins text-md'>{selectedPt.properties.description}</p>
                                         
                                 </div>
+                                
+                                
                                 
                                 
                             </div>
@@ -128,8 +130,8 @@ const Maps = () => {
                        
                     />
                            
-                        {/* <MapSearch 
-                        /> */}
+                        <MapSearch 
+                        />
                            
                 </Map>
             </div>

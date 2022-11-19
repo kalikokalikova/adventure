@@ -8,3 +8,16 @@
   padding:0;
   box-sizing: border-box;
 }
+
+.mapboxgl-popup-content{
+  width: 400px;
+  height: 150px;
+}
+
+.mapboxgl-popup-close-button button{
+  
+}
+/* .mapboxgl-popup .mapboxgl-popup-anchor-top-left{
+  max-width: 500px;
+} */
+

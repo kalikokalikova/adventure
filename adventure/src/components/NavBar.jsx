@@ -17,7 +17,7 @@ function NavBar() {
                 <li><Link to="/about">About Us</Link></li>
                 <li><Link to="">Log In</Link></li>
                 <li>
-                    <button className='bg-[#ffd25a] text-black p-2 rounded-lg shadow-lg'>
+                    <button className='bg-[#ffd25a] hover:bg-[#ffd35adc] hover:ease-in-out hover:duration-300 active:shadow-inner-md text-black w-[60%] px-[2rem] py-1 rounded-lg shadow-lg'>
                         <Link to="">Sign Up</Link>
                         </button>
                     </li>

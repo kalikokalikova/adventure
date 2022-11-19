@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
 import InputForm from '../components/InputForm'
-//import Map from '../components/Map/Map'
+import Map from '../components/Map/Map'
 
 
 function Home() {
@@ -13,13 +13,13 @@ function Home() {
 {/* MAP and INPUT container  */}
     <div className='flex flex-col items-start justify-center md:flex-row bg-white h-[100%]'>
 {/* Input container */}
-           <div className='hidden bg-[#b7dce0] bg-opacity-60 md:flex  md:h-[82vh] md:w-[45%] lg:w-[25%]'>
+           <div className='hidden bg-[#b7dce0] bg-opacity-60 md:flex  md:h-[82vh] md:w-[65%] lg:w-[25%]'>
             <InputForm/>
              
            </div>
 {/* MAP container  */}
             <div className=' w-[100%] h-[40%] bg-white border-solid border-2 md:h-[50%] lg:w-[75%] '>
-              {/*<Map />*/}
+              <Map />
             </div>
             
         </div>

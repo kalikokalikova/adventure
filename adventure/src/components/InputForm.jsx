@@ -19,8 +19,10 @@ function InputForm() {
     }
 
     return (
-      <div className='flex-col justify-center items-center'>
+      <div className='flex-col justify-center items-center mt-8'>
+         <h1 className='font-bold font-poppins text-2xl text-center'>Adventure Awaits...</h1>
         <form className="rounded px-3 pt-10 pb-2 ">
+         
             <div className="overflow-hidden">
                 <div className="">
                 <div className="font-poppins">
@@ -50,8 +52,8 @@ function InputForm() {
                         type="text"
                         name="miles"
                         id="miles"
-                        defaultValue={1}
-                        value={miles}
+                        placeholder="1"
+                       
                         autoComplete="number-miles"
                         className="text-center block w-1/5 ml-1 mr-2 rounded-lg border-gray-300 shadow-sm sm:text-md"
                       />
@@ -60,20 +62,20 @@ function InputForm() {
                       </label>
                     </div>
 
-                    <div>
+                    {/* <div>
                       <select
                         id="elevation"
                         name="elevation"
                         placeholder="Elevation"
                         autoComplete="elevation-value"
-                        className="hidden mt-1 block text-center pl-3 py-2 rounded-full border border-[#69A1AC] bg-white shadow-sm focus:border-[#69A1AC] focus:outline-none focus:ring-[#69A1AC] sm:text-sm"
+                        className="hidden mt-1  text-center pl-3 py-2 rounded-full border border-[#69A1AC] bg-white shadow-sm focus:border-[#69A1AC] focus:outline-none focus:ring-[#69A1AC] sm:text-sm"
                       >
                         <option>Elevation</option>
                         <option>Flat</option>
                         <option>Moderate</option>
                         <option>Hilly</option>
                       </select>
-                    </div>
+                    </div> */}
                     </div>
 
             <br />

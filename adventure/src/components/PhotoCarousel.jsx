@@ -41,21 +41,21 @@ const carouselImages = [
 
   return (
     <div>
-      <div>
-        <h3 className='font-poppins font-bold text-2xl ml-4 mb-8'>Community Finds</h3>
+      <div className='mx-2 mt-[15rem]'>
+        <h3 className='font-poppins font-bold text-2xl ml-4 mb-5'>Community Finds</h3>
         <Splide
             options={{
-                arrows:true,
+                arrows:false,
                 pagination:false,
                 drag:"free",
                 gap:'0.25rem',
                 mediaQuery:'min',
                 breakpoints:{
                     1440:{
-                        perPage: 5,
+                        perPage: 2,
                     },
                     1024:{
-                        perPage: 4,
+                        perPage: 2,
                     },
                     768:{
                         perPage: 2,
@@ -78,9 +78,10 @@ const carouselImages = [
             })} */}
             {carouselImages.map((image) => {
                 return(
-                <SplideSlide key={image.id}>
+                <SplideSlide key={image.name}>
                     <div>
-                    <img src={image} className="max-h-[10rem]" alt="/"/>
+                    <img src={image} 
+                    className="w-[100%] h-[13vh] object-fill bg-white overflow-y-hidden rounded-md" alt="/"/>
                     </div>
                 </SplideSlide>
                 )

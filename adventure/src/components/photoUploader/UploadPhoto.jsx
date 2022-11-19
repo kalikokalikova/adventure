@@ -1,10 +1,10 @@
 import React from 'react'
 import { useState } from 'react';
-import Uploader from './Uploader';
+// import Uploader from './Uploader';
 
 function UploadPhoto() {
     const [name, setName] = useState("");
-    const [selectedFile, setSelectedFile] = useState(null);
+    const [selectedFile, setSelectedFile] = useState();
     const [description, setDescription] = useState("");
 
     const submitForm = () => {

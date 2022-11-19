@@ -32,7 +32,6 @@ function ResultsForm(props) {
                         name="place"
                         id="place"
                         placeholder="San Francisco, CA"
-                        defaultValue="San Francisco, CA"
                         autoComplete="given-place"
                         className="rounded-full block w-full  sm:text-lg"
                       />
@@ -48,9 +47,10 @@ function ResultsForm(props) {
                         type="text"
                         name="miles"
                         id="miles"
-                        defaultValue={1}
-                        value={miles}
+                        placeholder="3"
+                        
                         autoComplete="number-miles"
+                        onChange={(e) => setMiles(e.target.value)}
                         className="text-center block w-1/5 ml-1 mr-2 rounded-lg border-gray-300 shadow-sm sm:text-md"
                       />
                         <label htmlFor="miles" className="mt-1 block text-md font-medium">
@@ -58,7 +58,7 @@ function ResultsForm(props) {
                       </label>
                     </div>
 
-                    <div className="">
+                    {/* <div className="">
                       <select
                         id="elevation"
                         name="elevation"
@@ -71,7 +71,7 @@ function ResultsForm(props) {
                         <option>Moderate</option>
                         <option>Hilly</option>
                       </select>
-                    </div>
+                    </div> */}
                     </div>
                   </div>
                 

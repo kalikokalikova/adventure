@@ -1,10 +1,20 @@
 import React from 'react'
 import {useState} from "react"
 import Pin from "../assets/eg-img/map-pin.svg"
+import Up from "../assets/eg-img/Arrow-up.png"
+import Down from "../assets/eg-img/Arrow-down.png"
 
 function InputForm() {
-const [miles, setMiles] = useState(1);
-let elevation = 1;
+    const [miles, setMiles] = useState(1);
+    let elevation = 1;
+
+    const increase = () => {
+        setMiles(miles + 1)
+    }
+    const decrease = () => {
+        if(miles > 0) setMiles(miles - 1)
+    }
+
     return (
         <form className="rounded px-3 pt-10 pb-10">
             <div className="overflow-hidden">
@@ -28,14 +38,18 @@ let elevation = 1;
 
             <div className="flex items-center mx-4 justify-between col-span-6 sm:col-span-6">
                     <div className="flex items-center">
+                        <div>
+                            <img src={Up} alt="arrow-up" onClick={increase}/>
+                            <img src={Down} alt="arrow-down" onClick={decrease}/>
+                        </div>
                       <input
-                        type="number"
+                        type="text"
                         name="miles"
                         id="miles"
                         defaultValue={1}
                         value={miles}
                         autoComplete="number-miles"
-                        className="text-center block w-1/5 mr-2 rounded-full border-gray-300 shadow-sm sm:text-md"
+                        className="text-center block w-1/5 ml-1 mr-2 rounded-lg border-gray-300 shadow-sm sm:text-md"
                       />
                         <label htmlFor="miles" className="mt-1 block text-md font-medium">
                         miles

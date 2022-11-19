@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import ReactMapGL, {GeolocateControl, Marker, NavigationControl, Popup } from 'react-map-gl'
+import Map, {GeolocateControl, Marker, NavigationControl, Popup } from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import axios from 'axios'
 import locationData from '../../Utils/mapdata.json'
@@ -7,7 +7,7 @@ import point from '../../assets/map-img/map-pin.svg'
 import MapSearch from '../MapSearch/MapSearch'
 import {IoMdPhotos} from 'react-icons/io'
 
-const Map = () => {
+const Maps = () => {
     const [viewport, setViewport] = useState({
         latitude: 37.77078872085789, 
         longitude: -122.43356346594742,
@@ -19,6 +19,7 @@ const Map = () => {
 
     const [location, setLocation] = useState([])
     const [selectedPt, setSelectedPt] = useState(null)
+    const [showPopup, setShowPopup] = useState(true)
 
     useEffect(() => {
         const listener = (e)=> {
@@ -48,13 +49,12 @@ const Map = () => {
     //     }
     //     getData()
     // }, [])
-
   return (
     <div>
         <div>
             <div 
             className='mapboxgl-map w-[100%] h-[80vh] bg-white border-solid border-2 md:h-[82vh] lg:w-[100%] '>
-                <ReactMapGL 
+                <Map 
                     {...viewport} 
                     mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
                     onMove={e => setViewport(e.viewport)}
@@ -86,13 +86,13 @@ const Map = () => {
                                                 {/* location, index */}
 
                     {selectedPt ? (
-                        <Popup 
+                        <Popup
                             latitude={selectedPt.geometry.coordinates[1]}
                             longitude={selectedPt.geometry.coordinates[0]}
                             closeButton={true}
                             closeOnClick={false} 
                             closeOnMove={false}
-                            onClose={() => {selectedPt(null) }}
+                            onClose={() => setSelectedPt(null)}
                         
                             
                         >
@@ -131,7 +131,7 @@ const Map = () => {
                         {/* <MapSearch 
                         /> */}
                            
-                </ReactMapGL>
+                </Map>
             </div>
          </div>
      </div>
@@ -140,4 +140,4 @@ const Map = () => {
 
 
 
-export default Map
+export default Maps
